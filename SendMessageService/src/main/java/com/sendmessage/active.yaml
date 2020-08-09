@@ -1,11 +1,26 @@
-template: Hello, %s!
-defaultName: Stranger
+mongoDBConnectionConfig:
+  credentials:
+    username: "user"
+    password: "user"
+  seeds:
+    - host: "sendmessage-node1-vuqpa.azure.mongodb.net"
+      port: 27017
+  database: "test"
+
+
+#logging:
+#  level: INFO
+ # loggers:
+  #  com.sendmessage: INFO
+
 server:
   maxThreads: 512
-  applicationContextPath: /he
+  applicationContextPath: /SendMessage
   applicationConnectors:
     - type: http
       port: 8080
   adminConnectors:
     - type: http
       port: 8081
+
+
